@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>قلیان‌سرای روشن</title>
+<style>
+  :root {
+    --accent: #8B4513;
+    --muted: #C0A080;
+    --bg: #3E2723;
+    --card-bg: #5D4037;
+    --text: #fff;
+  }
+
+  body {
+    margin: 0;
+    font-family: sans-serif;
+    background: var(--bg);
+    color: var(--text);
+  }
+
+  a { color: var(--accent); text-decoration: none; }
+
+  header {
+    width: 100%;
+    height: 250px;
+    background: url('https://chat.openai.com/cdn-cgi/image/width=1536,quality=80,format=auto/https://oaidalleapiprodscus.blob.core.windows.net/private/org-3OaTqASfX2a6xW5RQlF2PcLw/user-6Jk4x4mZwAIU7qLqJdUd8EvW/img-uj6bRXYOITK7vDHkLMZoj1MT.png?st=2025-11-04T12%3A31%3A23Z&se=2025-11-04T14%3A31%3A23Z&sp=r&sv=2022-11-02&sr=b&rscd=inline%3B%20filename%3Dheader.png') center/cover no-repeat;
+    border-bottom: 4px solid var(--accent);
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 16px;
+    padding: 16px;
+  }
+
+  .card {
+    background: var(--card-bg);
+    border-radius: 8px;
+    padding: 16px;
+  }
+
+  h2, h3, h4 { margin-top: 0; }
+  .small { font-size: 0.85rem; }
+
+  .flavor {
+    display: flex;
+    justify-content: space-between;
+    padding: 6px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+
+  .price { font-weight: bold; }
+
+  form input, form textarea {
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 8px;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid rgba(255,255,255,0.04);
+    background: transparent;
+    color: inherit;
+  }
+
+  form .flex-row {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  .btn {
+    margin-top: 8px;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    background: var(--accent);
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    width: 220px;
+  }
+
+  .map-placeholder {
+    width: 100%;
+    height: 200px;
+    background: linear-gradient(180deg,#3E2723,#5D4037);
+    border-radius: 8px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color: var(--muted);
+  }
+
+  footer {
+    text-align: center;
+    padding: 12px;
+    background: var(--card-bg);
+    margin-top: 16px;
+  }
+
+  @media (max-width: 768px) {
+    .grid { grid-template-columns: 1fr; padding: 12px; }
+    .btn { width: 100%; }
+    h2 { font-size: 1.5rem; }
+    h3 { font-size: 1.2rem; }
+    .small { font-size: 0.8rem; }
+  }
+</style>
+</head>
+<body>
+
+<header></header>
+
+<div class="grid">
+  <main class="card menu">
+    <h2 id="menu">منوی قلیان</h2>
+    <p class="small">قیمت‌ها به هزار تومان (همه طعم‌ها 100 هزار تومان)</p>
+    <section>
+      <h3>طعم‌ها</h3>
+      <div class="flavor"><div>هاوایی(آناناس.نارگیل.دراگون)</div><div class="price">۱۰۰</div></div>
+      <div class="flavor"><div>آریا(انگوسیاه.انار.ادامس)</div><div class="price">۱۰۰</div></div>
+      <div class="flavor"><div>دراگون</div><div class="price">۱۰۰</div></div>
+      <div class="flavor"><div>لاو</div><div class="price">۱۰۰</div></div>
+      <div class="flavor"><div>موسکو</div><div class="price">۱۰۰</div></div>
+      <div class="flavor"><div>نعنایخ</div><div class="price">۱۰۰</div></div>
+      <div class="flavor"><div>دوسیب‌اماراتی</div><div class="price">۱۰۰</div></div>
+      <div class="flavor"><div>بلوبری</div><div class="price">۱۰۰</div></div>
+      <div class="flavor"><div>هندوانه یخ</div><div class="price">۱۰۰</div></div>
+      <div class="flavor"><div>تمشک بستنی</div><div class="price">۱۰۰</div></div>
+      <div class="flavor"><div>کاپوچینو</div><div class="price">۱۰۰</div></div>
+      <div class="flavor"><div>لیمو نعنا</div><div class="price">۱۰۰</div></div>
+      <div class="flavor"><div>دوسیب آلبالو</div><div class="price">۱۰۰</div></div>
+      <div class="flavor"><div>آدامس</div><div class="price">۱۰۰</div></div>
+      <div class="flavor"><div>دوسیب</div><div class="price">۱۰۰</div></div>
+      <div class="flavor"><div>دژاوو</div><div class="price">۱۰۰</div></div>
+      <div class="flavor"><div>آدامس کوهی</div><div class="price">۱۰۰</div></div>
+      <div class="flavor"><div>لیمو ترش</div><div class="price">۱۰۰</div></div>
+      <div class="flavor"><div>انگو سیاه</div><div class="price">۱۰۰</div></div>
+      <div class="flavor"><div>پرتغال نعنا</div><div class="price">۱۰۰</div></div>
+      <div class="flavor"><div>آدامس نعنا</div><div class="price">۱۰۰</div></div>
+      <div class="flavor"><div>گل</div><div class="price">۱۰۰</div></div>
+      <div class="flavor"><div>دوسیب اماراتی</div><div class="price">۱۰۰</div></div>
+      <div class="flavor"><div>لیدی</div><div class="price">۱۰۰</div></div>
+      <div class="flavor"><div>Lv69</div><div class="price">۱۰۰</div></div>
+      <div class="flavor"><div>جوکر</div><div class="price">۱۰۰</div></div>
+      <div class="flavor"><div>شلیل</div><div class="price">۱۰۰</div></div>
+      <div class="flavor"><div>گل شلیل</div><div class="price">۱۰۰</div></div>
+      <div class="flavor"><div>دژاوو</div><div class="price">۱۰۰</div></div>
+      <div class="flavor"><div>آلبالو</div><div class="price">۱۰۰</div></div>
+      <div class="flavor"><div>آدامس دارچین</div><div class="price">۱۰۰</div></div>
+      <div class="flavor"><div>ترکیب ویژه</div><div class="price">۱۰۰</div></div>
+    </section>
+  </main>
+
+  <aside class="card">
+    <h3>آدرس و اطلاعات تماس</h3>
+    <div class="address">
+      تهران، خیابان رودکی، روبه‌روی خیابان متین، جنب کوروش
+    </div>
+    <div class="hours">ساعات کار: 10:00 — 20:00</div>
+    <div style="margin-top:8px">
+      <strong>تلفن رزرو:</strong>
+      <div class="contact small">+98 992 245 6503</div>
+    </div>
+    <h4 style="margin-top:12px">لینک‌های مفید</h4>
+    <div class="small">
+      وب‌سایت: <a href="#">www.roshan-hookah.example</a><br>
+      اینستاگرام: <a href="#">@coffe.roshan</a>
+    </div>
+    <div style="margin-top:12px">
+      <h4>نقشه</h4>
+      <div class="map-placeholder">نقشه در نسخه نهایی قرار می‌گیرد</div>
+    </div>
+  </aside>
+</div>
+
+<section class="card" id="contact" style="margin-top:16px">
+  <h2>رزرو یا پرسش</h2>
+  <p class="small">برای رزرو میز یا سوالات، فرم زیر را پر کنید یا با شماره تماس بگیرید.</p>
+  <form onsubmit="event.preventDefault();alert('درخواست رزرو ثبت شد')">
+    <div class="flex-row">
+      <input placeholder="نام و نام‌خانوادگی" required>
+      <input placeholder="تلفن" required>
+    </div>
+    <textarea rows="4" placeholder="پیام یا درخواست (تعداد نفرات، تاریخ، ساعت)"></textarea>
+    <button class="btn" type="submit">ارسال درخواست</button>
+  </form>
+</section>
+
+<footer>
+  © 2025 قلیان‌سرای روشن — همه حقوق محفوظ است
+</footer>
+
+</body>
+</html>
+	
